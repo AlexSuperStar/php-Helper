@@ -1,6 +1,8 @@
 # php-Helper
 (PHP 5 >= 5.3.0, PHP 7)
 
+*Read this in other languages: [English](README.en.md).*
+
 Статический класс с автоматической подгрузкой функций
 
 
@@ -13,10 +15,24 @@
 ```php
 include 'H.php';
 var_dump(H::bc('((($1+$2)*$3)-2)>=6',2,2,2));
-var_dump(H::bc('($1*$2)*2',2,2)); 
+var_dump(H::dirList('./')); 
+
 ```
 результат(result):
 ```bash
 string(1) "1"
-string(1) "8"
+array(8) {
+  [".gitignore"]=>
+  string(10) ".gitignore"
+  ["example.php"]=>
+  string(11) "example.php"
+  ["H.php"]=>
+  string(5) "H.php"
+  ["helper"]=>
+  string(6) "helper"
+  ["README.en.md"]=>
+  string(12) "README.en.md"
+  ["README.md"]=>
+  string(9) "README.md"
+}
 ```
